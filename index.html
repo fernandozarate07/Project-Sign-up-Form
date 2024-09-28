@@ -27,16 +27,16 @@
 
             <div class="containerForm">
                 <h1>Let's do this!</h1>
-                <form action="#" method="post" class="form">
+                <form action="https://httpbin.org/post" method="post" class="form" novalidate>
                     <div class="fieldsetContainer">
                         <fieldset>
                             <legend>Name</legend>
-                            <input type="text" id="inpName" name="name" required>
+                            <input type="text" id="inpName" name="name" required placeholder="Fulano">
                             <p class="paraError"></p>
                         </fieldset>
                         <fieldset>
                             <legend>Email</legend>
-                            <input type="email" id="inpEmail" name="email" required>
+                            <input type="email" id="inpEmail" name="email" required placeholder="fulano@gmail.com">
                             <p class="paraError"></p>
                         </fieldset>
                         <fieldset>
@@ -46,12 +46,12 @@
                         </fieldset>
                         <fieldset>
                             <legend> Last Name</legend>
-                            <input type="text" id="inpLastName" name="lastName" required>
+                            <input type="text" id="inpLastName" name="lastName" required placeholder="Mengano">
                             <p class="paraError"></p>
                         </fieldset>
                         <fieldset>
                             <legend>Phone Number</legend>
-                            <input type="number" id="inpPhoneNumber" name="phoneNumber" required>
+                            <input type="number" id="inpPhoneNumber" name="phoneNumber" required placeholder="xxx-xxxxxxx">
                             <p class="paraError"></p>
                         </fieldset>
                         <fieldset>
