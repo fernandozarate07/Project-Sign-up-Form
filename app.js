@@ -5,16 +5,16 @@ document.querySelector(".form").addEventListener("submit", (event) => {
     const password = document.getElementById('inpPassword');
     const confirmPassword = document.getElementById('inpConfirmPassword');
 
-    // limpiamos iterando 
+    // Clear previous errors
     paraError.forEach((para) => para.textContent = '');
     inputs.forEach(input => {
         input.classList.remove('valid', 'invalid');
     });
 
-    let isValid = true; 
+    let isValid = true;
     const phoneRegex = /^\d{3}-\d{7}$/;
 
-    // Validar campos
+    // Validate fields
     inputs.forEach((element, index) => {
         if (element.checkValidity()) {
             element.classList.add('valid');
@@ -25,28 +25,28 @@ document.querySelector(".form").addEventListener("submit", (event) => {
             element.classList.remove('valid');
 
             if (element.value === '') {
-                paraError[index].textContent = 'Error: Complete el campo';
+                paraError[index].textContent = 'Error: Please fill out this field';
             } else if (element.name === 'password' || element.name === 'confirmPassword') {
-                paraError[index].textContent = 'Error: Asegúrece que la contraseña tenga entre 8 y 20 caracteres';
+                paraError[index].textContent = 'Error: Make sure your password is between 8 and 20 characters';
             } else if (element.name === 'email') {
-                paraError[index].textContent = 'Error: Asegúrece que el email que proporciono sea valido';
+                paraError[index].textContent = 'Error: Please ensure the provided email is valid';
             }
         }
 
-        // Validar formato del número de teléfono
+        // Validate phone number format
         if (element.name === 'phoneNumber') {
             if (!phoneRegex.test(element.value)) {
                 isValid = false;
                 element.classList.add('invalid');
                 element.classList.remove('valid');
-                paraError[index].textContent = 'Error: El formato del número de teléfono debe ser xxx-xxxxxxx';
+                paraError[index].textContent = 'Error: The phone number format must be xxx-xxxxxxx';
             }
         }
     });
 
-    // Validar si las contraseñas coinciden
+    // Validate if passwords match
     if (password.value !== confirmPassword.value) {
-        paraError[paraError.length - 1].textContent = 'Error: Revisa tus contraseñas para que ambas coincidan'; 
+        paraError[paraError.length - 1].textContent = 'Error: Please ensure both passwords match'; 
         password.classList.add('invalid');
         confirmPassword.classList.add('invalid');
         isValid = false;
@@ -56,7 +56,7 @@ document.querySelector(".form").addEventListener("submit", (event) => {
         isValid === true;
     }
 
-    // Prevenir el envío si hay errores
+    // Prevent form submission if there are errors
     if (!isValid) {
         event.preventDefault();
     }
