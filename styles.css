@@ -1,0 +1,157 @@
+:root{
+    --colorTurquoise: #48D1CC;
+    --colorBlue:#007BFF;
+    --colorGreen:#28a745;
+    --colorRed:#dc3545;
+    --colorWhiteChalk:#F5F5F5;
+    --colorWhitePure: #FFFFFF;
+    --colorGrey: #D3D3D3;
+    --colorBlack:#1a1a1a;
+    --colorBlackBackground:rgba(0, 0, 0, 0.6);
+
+
+
+    --widthContainerLeft: calc((100vw - (var(--marginMain) * 2)) * 0.4);
+    --widthContainerRight: calc((100vw - (var(--marginMain) * 2)) * 0.6);
+    --marginMain:150px;
+
+    font-family: 'Inter', sans-serif;
+
+}
+input{
+    height: 20px;
+    border: 1px solid var(--colorGrey);
+}
+fieldset {
+    border: none;        
+}
+p{
+    font-size:calc(.5rem + .5vw);
+}
+h1{
+    font-size:calc(1rem + .5vw);
+}
+a{
+    color: var(--colorTurquoise);
+    text-decoration: none;
+
+}
+input:focus{
+    outline-color: var(--colorBlue);
+}
+.valid{
+    border: 1px solid var(--colorGreen);
+}
+.invalid{
+    border: 1px solid var(--colorRed);
+
+}
+body{
+    background-color: var(--colorBlack);
+}
+main{
+    margin-inline: var(--marginMain);
+    width: calc(100vw - (var(--marginMain)*2));
+    height: min(100vh);
+
+    display: flex;
+
+    background-color: var(--colorWhiteChalk);
+}
+
+/* ContainerLeft */
+
+.containerLeft{
+    width: var(--widthContainerLeft);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background-image: url("/img/argentina.jpg");
+    background-size: cover; /* Asegura que la imagen cubra el área del elemento */
+}
+.topImg{
+    position: relative;
+    bottom: 50vh;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--colorBlackBackground);
+}
+.containerLeft p{
+    color: var(--colorWhitePure);
+    text-align: center;
+}
+.topImg img{
+    width: clamp(50px, 100px, 400px);
+
+}
+
+/* ContainerRight */
+
+.containerRight{
+    width: var(--widthContainerRight);
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--colorWhiteChalk);
+}
+.containerRight>:first-child{
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.containerRight>:first-child p{
+    font-size: calc(.8rem + .5vw);
+    font-weight: bold;
+}
+.containerForm h1{
+    margin: 0;
+    padding: 20px;
+    background-color: var(--colorWhitePure);
+}
+.form{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.fieldsetContainer{
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    background-color: var(--colorWhitePure);
+}
+.containerRight>div{
+    flex: 1;
+}
+.containerRight > :last-child {
+    padding-inline: 20px;
+    display: flex; 
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.buttonForm{
+    margin-inline: 20px;
+    width: 200px;
+    height: 50px;
+
+    border-radius: 10px;
+    border: none;
+    color: var(--colorWhitePure);
+    background-color: var(--colorTurquoise);
+    cursor: pointer;
+}
+
+

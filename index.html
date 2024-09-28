@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <section class="containerLeft">
+            <div class="topImg">
+                <img src="/img/odin-lined.png" alt="odin logo">
+            </div>
+            <p>Photo by FreePick</p>
+        </section>
+
+        <section class="containerRight">
+            <div>
+                <p>This is not a real online service! You Know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
+                <p>You know you want to.</p>
+
+            </div>
+
+            <div class="containerForm">
+                <h1>Let's do this!</h1>
+                <form action="#" method="post" class="form">
+                    <div class="fieldsetContainer">
+                        <fieldset>
+                            <legend>Name</legend>
+                            <input type="text" id="inpName" name="name" required>
+                            <p class="paraError"></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Email</legend>
+                            <input type="email" id="inpEmail" name="email" required>
+                            <p class="paraError"></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Password</legend>
+                            <input type="password" id="inpPassword" name="password" required>
+                            <p class="paraError"></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend> Last Name</legend>
+                            <input type="text" id="inpLastName" name="lastName" required>
+                            <p class="paraError"></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Phone Number</legend>
+                            <input type="number" id="inpPhoneNumber" name="phoneNumber" required>
+                            <p class="paraError"></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Confirm Password</legend>
+                            <input type="password" id="inpConfirmPassword" name="confirmPassword" required>
+                            <p class="paraError"></p>
+                        </fieldset>
+                    </div>
+                    <button type="submit" class="buttonForm">Create Acount</button>
+                </form>
+            </div>
+
+            <div>
+                <p>Already have an acount?<a href="#"> Log ig </a></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scrip -->
+     <script src="app.js"></script>
+</body>
+</html>
