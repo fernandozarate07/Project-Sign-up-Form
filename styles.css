@@ -45,9 +45,11 @@ a{
     text-decoration: none;
 
 }
-input:focus{
+input:focus {
     border: 1px solid var(--colorBlue);
+    outline: none;
 }
+
 .valid{
     border: 1px solid var(--colorGreen);
 }
