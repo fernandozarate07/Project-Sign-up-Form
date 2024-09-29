@@ -83,8 +83,8 @@ main{
     flex-direction: column;
     justify-content: flex-end;
 
-    background-image: url("/img/argentina.jpg");
-    background-size: cover; /* Asegura que la imagen cubra el área del elemento */
+    background-image:url(/img/argentina2.webp);
+    background-size: cover; 
 }
 .topImg{
     position: relative;
