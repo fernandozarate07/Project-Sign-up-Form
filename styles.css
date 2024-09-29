@@ -83,7 +83,7 @@ main{
     flex-direction: column;
     justify-content: flex-end;
 
-    background-image:url(/img/argentina2.webp);
+    background-image:url(https://img.freepik.com/foto-gratis/disparo-vertical-glaciar-moreno-santa-cruz-argentina_181624-37757.jpg?t=st=1727568462~exp=1727572062~hmac=4d1b14e8154afbb5b8ec4e793d17043ab346fd604e89485e16166dfabe8d166e&w=900);
     background-size: cover; 
 }
 .topImg{
